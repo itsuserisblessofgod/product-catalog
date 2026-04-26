@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mvn dependency:resolve -q)",
+      "Bash(mvn -q dependency:build-classpath -Dmdep.outputFile=/tmp/cp.txt)",
+      "Read(//tmp/**)",
+      "Bash(mvn spring-boot:run)",
+      "Bash(mvn -version)",
+      "Read(//c//**)",
+      "Read(//c/Users/Public/**)",
+      "Bash(mvn -X dependency:list -DincludeScope=runtime)",
+      "Bash(mvn dependency:list)",
+      "PowerShell(if \\(-not \\(Test-Path 'C:\\\\m2-repo'\\)\\) { cmd /c 'mklink /J C:\\\\m2-repo \"C:\\\\Users\\\\Жанасыл\\\\.m2\\\\repository\"' } else { Write-Output 'Already exists' }; Test-Path 'C:\\\\m2-repo\\\\org\\\\springframework\\\\boot\\\\spring-boot\\\\3.3.4\\\\spring-boot-3.3.4.jar')",
+      "Bash(mvn spring-boot:run -Dmaven.repo.local=C:/m2-repo)"
+    ]
+  }
+}
