@@ -35,6 +35,7 @@ springdoc:
     tags-sorter: alpha
     try-it-out-enabled: true
   packages-to-scan: com.ecommerce.catalog.controller
+  paths-to-match: /api/**
 
 logging:
   level:
